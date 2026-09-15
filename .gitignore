@@ -1,0 +1,28 @@
+
+# NetBeans
+/nbproject/private/
+/build/
+/dist/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+nbactions.xml
+nb-configuration.xml
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Compiled files
+*.class
+*.jar
+*.war
+*.ear
+*.o
+
