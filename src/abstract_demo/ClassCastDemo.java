@@ -1,23 +1,26 @@
+package abstract_demo;
 
-abstract class Shape {
+abstract class ShapeCast {
 }
 
-class Rectangle extends Shape {
+class RectangleCast extends ShapeCast {
 }
 
-class Circle extends Shape {
+class CircleCast extends ShapeCast {
 }
 
 public class ClassCastDemo {
 
     public static void main(String[] args) {
-
-        Shape s = new Circle();
+        ShapeCast s = new CircleCast();
 
         System.out.println("Object is Circle");
 
-        Rectangle r = (Rectangle) s;
-
-        System.out.println("Casting successful");
+        try {
+            RectangleCast r = (RectangleCast) s;
+            System.out.println("Casting successful");
+        } catch (ClassCastException e) {
+            System.out.println("ClassCastException: Cannot cast Circle to Rectangle");
+        }
     }
 }

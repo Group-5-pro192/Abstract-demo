@@ -1,8 +1,9 @@
-abstract class Shape {
+package abstract_demo;
+
+abstract class ShapeDown {
 }
 
-class Rectangle extends Shape {
-
+class RectangleDown extends ShapeDown {
     public void showRectangle() {
         System.out.println("Rectangle method called");
     }
@@ -11,16 +12,13 @@ class Rectangle extends Shape {
 public class DowncastingTechniqueDemo {
 
     public static void main(String[] args) {
-
-        Shape s = new Rectangle();
+        ShapeDown s = new RectangleDown();
 
         // Inline Downcasting
-        ((Rectangle) s).showRectangle();
+        ((RectangleDown) s).showRectangle();
 
         // Downcasting to a subclass reference
-        Rectangle r = (Rectangle) s;
+        RectangleDown r = (RectangleDown) s;
         r.showRectangle();
     }
 }
-
-
