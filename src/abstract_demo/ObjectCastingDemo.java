@@ -1,10 +1,10 @@
-abstract class Shape {
+package abstract_demo;
 
+abstract class ShapeBase {
     public abstract void draw();
 }
 
-class Rectangle extends Shape {
-
+class Rectangle extends ShapeBase {
     @Override
     public void draw() {
         System.out.println("Drawing a Rectangle");
@@ -14,10 +14,9 @@ class Rectangle extends Shape {
 public class ObjectCastingDemo {
 
     public static void main(String[] args) {
+        ShapeBase obj = new Rectangle();
 
-        Shape obj = new Rectangle();
-
-        System.out.println("Static type: Shape");
+        System.out.println("Static type: ShapeBase");
         System.out.println("Dynamic type: Rectangle");
 
         obj.draw();

@@ -1,32 +1,27 @@
-abstract class Shape {
+package abstract_demo;
+
+abstract class ShapeInstance {
 }
 
-class Rectangle extends Shape {
-
+class RectangleInstance extends ShapeInstance {
     public void showRectangle() {
         System.out.println("This is a Rectangle");
     }
 }
 
-class Circle extends Shape {
+class CircleInstance extends ShapeInstance {
 }
 
 public class InstanceofDemo {
 
     public static void main(String[] args) {
+        ShapeInstance s = new RectangleInstance();
 
-        Shape s = new Rectangle();
-
-        if (s instanceof Rectangle) {
-
-            Rectangle r = (Rectangle) s;
-
+        if (s instanceof RectangleInstance) {
+            RectangleInstance r = (RectangleInstance) s;
             r.showRectangle();
-
         } else {
-
             System.out.println("Object is not a Rectangle");
         }
     }
 }
-

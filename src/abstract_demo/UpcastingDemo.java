@@ -1,9 +1,10 @@
-abstract class Shape {
-    
+package abstract_demo;
+
+abstract class ShapeUp {
     public abstract void draw();
 }
 
-class Rectangle extends Shape {
+class RectangleUp extends ShapeUp {
 
     @Override
     public void draw() {
@@ -18,11 +19,8 @@ class Rectangle extends Shape {
 public class UpcastingDemo {
 
     public static void main(String[] args) {
-
-        Rectangle r = new Rectangle();
-
-        Shape s = r;
-
+        RectangleUp r = new RectangleUp();
+        ShapeUp s = r;
         s.draw();
     }
 }
