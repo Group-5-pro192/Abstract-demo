@@ -3,9 +3,7 @@ package abstract_demo;
 import java.util.ArrayList;
 import java.util.List;
 
-// ============================================================================
-// 1. INTERFACES (Năng lực bổ trợ - "CAN-DO")
-// ============================================================================
+// 1. INTERFACES (Năng lực bổ trợ - "CAN-DO"
 interface Refundable {
 
     double MAX_REFUND_LIMIT = 5000.0; // Hằng số (public static final)
@@ -23,9 +21,7 @@ interface Promotable {
     }
 }
 
-// ============================================================================
 // 2. ABSTRACT CLASS (Bản chất chung - "IS-A")
-// ============================================================================
 abstract class Payment {
 
     private String transactionId; // Encapsulated Field
@@ -55,9 +51,7 @@ abstract class Payment {
     public abstract void processPayment();
 }
 
-// ============================================================================
 // 3. CONCRETE SUBCLASSES (Triển khai thực tế)
-// ============================================================================
 // Lớp 1: Thanh toán thẻ tín dụng (Kế thừa Payment, Triển khai Refundable & Promotable)
 class CreditCardPayment extends Payment implements Refundable, Promotable {
 
@@ -133,13 +127,11 @@ class CashOnDeliveryPayment extends Payment {
     }
 }
 
-// ============================================================================
 // 4. MAIN CLASS (Lớp chính để chạy Demo trong NetBeans)
-// ============================================================================
 public class abstract_demo {
 
     public static void main(String[] args) {
-        System.out.println("========== HỆ THỐNG QUẢN LÝ THANH TOÁN (NETBEANS DEMO) ==========\n");
+        System.out.println("----------- HỆ THỐNG QUẢN LÝ THANH TOÁN (NETBEANS DEMO) ---------\n");
 
         // 1. UPCASTING & ĐA HÌNH (Polymorphism)
         // Tạo danh sách quản lý bằng biến kiểu lớp cha Payment
@@ -174,6 +166,6 @@ public class abstract_demo {
             System.out.println();
         }
 
-        System.out.println("================ BUILD SUCCESSFUL ================");
+        System.out.println("----------- BUILD SUCCESSFUL -----------");
     }
 }
